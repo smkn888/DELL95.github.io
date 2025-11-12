@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    div{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border-width: 10px;
+        border: 1px black solid;
+    }
+
+    button{
+        padding: 10px;
+        margin-top: 11px;  
+    }
+
+
+table{
+    margin-top: 50px;
+}
+
+th{
+    padding: 9px;
+    border-spacing: 0px;
+}
+</style>
+ 
+
+
+
+
+
+
+<body>
+    <div class="table"></div>
+      <h1>data siswa</h1>
+
+      <div class="table"></div>
+
+    
+    
+    <div class="form grup"></div>
+    <label for="nama"></label>
+    <input type="text" id="nama" placeholder=" nama ">
+    </div>
+
+    <div class="form grup"></div>
+    <label for="nama"></label>
+    <input type="text" id="nama" placeholder="jenis-kelamin">
+    </div>
+
+    <div class="form grup"></div>
+    <label for="nama"></label>
+    <input type="text" id="nama" placeholder="tempat lahir">
+    </div>
+
+    <div class="form grup"></div>
+    <label for=""></label>
+    <input type="text" id="" placeholder="tanggallahir">
+    </div>
+
+    <div class="form grup"></div>
+    <label for=""></label>
+    <input type="text" id="alamat" placeholder="alamat">
+    </div>
+</body>
+
+<button class="load data" onclick="load-data()">load data</button>
+<button class="btn-tambah" onclick="tambahData()">tambah data</button>
+ </div>
+
+ <table>
+    <thead>
+        <tr>
+            <th>No</th>
+               <th>Nama</th>
+                  <th>jenis-kelamin</th>
+                 <th>tempat lahir</th>
+                 <th>alamat</th>
+        
+        </tr>
+    </thead>
+    <tbody id="tablebody"></tbody>
+
+ </table>
+ </div>
+
+<script>
+    let data = [];
+    let index = -1;
+
+    function loadData(){
+        const nama = document.getElementById('nama').value;
+        const jeniskelamin = document.getElementById('jenis-kelamin').value;
+        const tempatlahir = document.getElementById('tempat lahir').value;
+        const tanggallahir  = document.getElementById('tanggal lahir').value;
+        const alamat = document.getElementById('alamat').value;
+
+        if (!nama || !tempatlahir || !tanggallahir || !alamat){
+            alert('harap isi semua kolom')
+            return
+        };
+
+        if (index=== -1){
+            data .push(item);
+        }else{
+            data[index]= item;
+            index = -1;
+
+    }
+    clearForm();
+    loadData();
+}
+
+function tambahData(){
+         document.getElementById('nama').value = '';
+         document.getElementById('jenis-kelamin').value = 'pria'
+         document.getElementById('tempat lahir').value = '';
+         document.getElementById('tanggal lahir').value = '';
+         document.getElementById('alamat').value = '';
+}
+
+function hapusData(){
+if (confirm('apakah anda yakin ingin mengapus data ini ?')){
+}
+}
+
+function editData(index){
+    editindex = index;
+    const item = data[index];
+
+         document.getElementById('nama').value = item.nama;
+         document.getElementById('jenis-kelamin').value = item.jeniskelamin
+         document.getElementById('tempat lahir').value = item.tempatlahir;
+         document.getElementById('tanggal lahir').value =item.tanggallahir;
+         document.getElementById('alamat').value = item.alamat;
+
+
+}
+</script>
+
+
+</table>
+</body>
+</html>
