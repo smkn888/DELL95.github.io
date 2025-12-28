@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Mobile Sederhana</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d6efd;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .app {
+            background: white;
+            color: black;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background: #0d6efd;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app">
+        <h2>App Mobile</h2>
+        <p id="teks">Halo 👋</p>
+        <button onclick="ubah()">open</button>
+    </div>
+
+    <script>
+        function ubah() {
+            document.getElementById("teks").innerHTML =
+                "Ini sudah seperti app mobile 😎";
+        }
+    </script>
+
+</body>
+</html>
